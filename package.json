@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bun run --hot server/index.tsx"
+    "dev": "bun run --hot server/index.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
