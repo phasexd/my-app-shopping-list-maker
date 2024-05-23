@@ -1,6 +1,6 @@
 import {Hono} from "hono";
 import { zValidator } from '@hono/zod-validator'
-import {z} from "zod"
+import {promise, z} from "zod"
 
 
 
@@ -59,7 +59,7 @@ export const itemsRoutes = new Hono()
     c.status(201)
     return c.json(item)
 })
-.get("/total-spent",(c) => {
+.get("/total-spent", (c) => {
   const total = FakeItems.reduce((acc, Items) => acc + Items.amount, 0);
   return c.json({ total });
 })
