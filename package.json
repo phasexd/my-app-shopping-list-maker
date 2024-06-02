@@ -1,14 +1,25 @@
 {
+  "name": "app",
+  "module": "server/index.ts",
+  "type": "module",
   "scripts": {
-    "dev": "bun run --hot server/index.ts"
-  },
-  "dependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "@hono/zod-validator": "^0.2.1",
-    "hono": "^4.3.6",
-    "zod": "^3.23.8"
+    "start": "bun server/index.ts",
+    "dev": "bun --watch server/index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.20.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "drizzle-orm": "^0.29.4",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^3.12.9",
+    "pg": "^8.11.3",
+    "postgres": "^3.4.3",
+    "zod": "^3.22.4"
   }
 }
